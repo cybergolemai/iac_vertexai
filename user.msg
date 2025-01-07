@@ -251,22 +251,4 @@ Do you have any other resources (e.g., buckets, BigQuery tables) that need to be
 
 After each question has been answered: move to the next question. These 6 questions are the only 6.
 
-After all 6 questions are complete: propose an AMI appropriate for the instance type.
-
-The default setting """# Latest Ubuntu ARM AMI lookup
-data "aws_ami" "ubuntu_arm" {
-  most_recent = true
-  owners      = ["099720109477"] # Canonical
-
-  filter {
-    name   = "name"
-    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-arm64-server-*"]
-  }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-}""" assumes t4g.small instance type with ARM cpu. Validate CPU / AMI compatibility before finalizing the terraform config.
-
 Finally, generate a new single-file main.tf with the backend code defined in-line.
