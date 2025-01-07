@@ -249,6 +249,6 @@ What is the desired duration for your log retention?
 Would you like to keep the existing output values (instance_public_ip and bedrock_endpoint) or change them?
 Do you have any other resources (e.g., buckets, BigQuery tables) that need to be configured as part of this Terraform deployment?"""
 
-After each question has been answered: move to the next question. These 7 questions are the only 7.
+After each question has been answered: move to the next question. These 6 questions are the only 6.
 
-After all 6 questions are complete: generate a new single-file main.tf with the backend code defined in-line.
+Finally, generate a new single-file main.tf with the backend code defined in-line.
